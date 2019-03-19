@@ -1,0 +1,124 @@
+commit b50a902ed99a4543339e0bbef21a2e477b3ee0d2
+Author: Hiisable <jaakko.karjalainen@gmail.com>
+Date:   Tue Mar 19 15:32:40 2019 +0200
+
+    lisää muutoksia
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit d98540ecdfbea8c78989eec0016dd73688ab34ac
+Author: Hiisable <jaakko.karjalainen@gmail.com>
+Date:   Tue Mar 19 15:29:03 2019 +0200
+
+    luotiin kolme tiedostoa
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 83433c713d1a2f3f79b0263c092d6e7b644d0786
+Author: Hiisable <jaakko.karjalainen@gmail.com>
+Date:   Tue Mar 19 15:22:00 2019 +0200
+
+    muutokset
+
+ eka.txt    | 5 +++--
+ kolmas.txt | 3 ++-
+ 2 files changed, 5 insertions(+), 3 deletions(-)
+
+commit 19b7b16db949a5686165fdc26bc672f62473712d
+Author: Hiisable <jaakko.karjalainen@gmail.com>
+Date:   Tue Mar 19 15:20:26 2019 +0200
+
+    muutettiin nimeä
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 87e53273f0a2fd2a32d66e812754359bcb021d77
+Author: Hiisable <jaakko.karjalainen@gmail.com>
+Date:   Tue Mar 19 15:19:00 2019 +0200
+
+    poistettiin toinen
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 2b054e4ec6353ab8760b57dfbb06a57adea664de
+Author: Hiisable <jaakko.karjalainen@gmail.com>
+Date:   Tue Mar 19 15:18:00 2019 +0200
+
+    luotiin toinen
+
+ toinen.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 367fa26a1573e9a3723292df4be43a77b8796cdc
+Author: Hiisable <jaakko.karjalainen@gmail.com>
+Date:   Tue Mar 19 15:15:03 2019 +0200
+
+    lisää tekstiä
+
+ tiedosto.txt | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+
+commit 1fbca1528a9056e0eac2871836985c41fc81c4d0
+Author: Hiisable <jaakko.karjalainen@gmail.com>
+Date:   Tue Mar 19 14:56:18 2019 +0200
+
+    uudet muutokset
+
+ kolmas.txt                | 2 +-
+ "stuff/nelj\303\244s.txt" | 1 +
+ toinen.txt                | 2 +-
+ 3 files changed, 3 insertions(+), 2 deletions(-)
+
+commit 53f4bb27bade73cfccef4d5b636514a81e6df224
+Author: Hiisable <jaakko.karjalainen@gmail.com>
+Date:   Tue Mar 19 14:49:35 2019 +0200
+
+    luotiin kolmas.txt
+
+ kolmas.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit eb2a98fcb044536269750fb2915bf06cd1bb3871
+Author: Hiisable <jaakko.karjalainen@gmail.com>
+Date:   Tue Mar 19 14:48:33 2019 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 2 +-
+ toinen.txt   | 1 +
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+commit d4084e8cb637be884080af3ea953cbc5c406f98f
+Author: Hiisable <jaakko.karjalainen@gmail.com>
+Date:   Tue Mar 19 14:41:22 2019 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 4678e5ff1891961b1b2e99182f1e0ebea3afd708
+Author: Hiisable <jaakko.karjalainen@gmail.com>
+Date:   Tue Mar 19 14:38:47 2019 +0200
+
+    poistettu
+
+ tiedosto.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit c1fff04c6039d9b1395f7aac32c7adf7d78c18cf
+Author: Hiisable <jaakko.karjalainen@gmail.com>
+Date:   Tue Mar 19 12:50:06 2019 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
