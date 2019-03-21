@@ -11,3 +11,5 @@
 1. [Maksukortti](https://github.com/Hiisable/ot-harjoitustyo/tree/master/laskarit/viikko2/Maksukortti)
 1. [Unicafe](https://github.com/Hiisable/ot-harjoitustyo/tree/master/laskarit/viikko2/Unicafe)
 1. [Testikattavuus](https://github.com/Hiisable/ot-harjoitustyo/blob/master/laskarit/viikko2/Testikattavuus.png)
+
+* [Vaatimusmäärittely](https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Vaatimusmaarittely.md)
