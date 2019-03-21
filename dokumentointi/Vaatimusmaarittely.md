@@ -16,6 +16,8 @@ Sovelluksen ainoa käyttäjärooli on pelaaja eli normaali käyttäjä.
 
 Sovellus koostuu kolmesta eri näkymästä, jotka on esitetty kuvassa.
 
+<img src="https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/kuvat/K%C3%A4ytt%C3%B6liittym%C3%A4%20vaatimusm%C3%A4%C3%A4rittelyyn.png">
+
 Sovellus aukeaa näkymään, jossa valitaan kuinka monta käyttäjää haluaa 
 pelata. Seuraavassa näkymässä pelaajat kirjoittavat nimensä kenttään. 
 Nimien kirjaamisen jälkeen aukeaa varsinainen pelinäkymä, jossa pelaajat 
