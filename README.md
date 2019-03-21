@@ -13,3 +13,5 @@
 1. [Testikattavuus](https://github.com/Hiisable/ot-harjoitustyo/blob/master/laskarit/viikko2/Testikattavuus.png)
 
 * [Vaatimusmäärittely](https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Vaatimusmaarittely.md)
+
+[Tyoaikakirjanpito] (https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Tuntikirjanpito.md)
