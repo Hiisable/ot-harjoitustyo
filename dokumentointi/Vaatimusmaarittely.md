@@ -1,5 +1,5 @@
 
-##Vaatimusmäärittely
+## Vaatimusmäärittely
 
 ### Sovelluksen tarkoitus
 
@@ -25,21 +25,21 @@ heittävät noppia ja kirjaavat pisteensä taulukkoon.
 
 #### Ennen pelin alkua
 
-Käyttäjä voi valita pelaajien määrän.
+* Käyttäjä voi valita pelaajien määrän.
 
-Käyttäjä(t) voivat kirjata itselleen pelinimen.
+* Käyttäjä(t) voivat kirjata itselleen pelinimen.
 
 #### Pelin luomisen jälkeen
 
-Käyttäjät voivat heittää noppia.
+* Käyttäjät voivat heittää noppia.
 
-Käyttäjät voivat kirjata haluamiaan tuloksia itselleen pelin sääntöjen 
+* Käyttäjät voivat kirjata haluamiaan tuloksia itselleen pelin sääntöjen 
 mukaisesti.
 
-Pelin tulee kertoa käyttäjille heidän pistesaldonsa sääntöjen mukaisesti 
+* Pelin tulee kertoa käyttäjille heidän pistesaldonsa sääntöjen mukaisesti 
 ja pelin lopuksi kertoa pelin voittaja.
 
-Käyttäjien tulee pystyä aloittamaan uusi peli pelin loputtua ilman 
+* Käyttäjien tulee pystyä aloittamaan uusi peli pelin loputtua ilman 
 ohjelman uudelleenkäynnistystä.
 
 ### Jatkokehitysideoita
@@ -47,11 +47,11 @@ ohjelman uudelleenkäynnistystä.
 Perusversion jälkeen sovellusta täyfennetään ajan salliessa esim. 
 seuraavilla toiminnallisuuksilla.
 
-Peliä voi pelata suurempi määrä kuin kaksi pelaajaa kerrallaan.
-Peliin voidaan lisätä käyttäjätunnuksen luomisen ja kirjautumisen 
+* Peliä voi pelata suurempi määrä kuin kaksi pelaajaa kerrallaan.
+* Peliin voidaan lisätä käyttäjätunnuksen luomisen ja kirjautumisen 
 mahdollisuus.
-Edellisen toiminnallisuuden toteutuessa peliin voidaan lisätä 
+* Edellisen toiminnallisuuden toteutuessa peliin voidaan lisätä 
 tietokanta, johon kerätään käyttäjien pelaamien 
 pelien tuloksia.
-Tuloksiin voidaan lisätä toiminnallisuus, jossa käyttäjät näkevät 
+* Tuloksiin voidaan lisätä toiminnallisuus, jossa käyttäjät näkevät 
 toisiaan vastaan pelaamiensa pelien tulokset.
