@@ -1,5 +1,5 @@
 
-##Vaatimusmäärittely
+## Vaatimusmäärittely
 
 ### Sovelluksen tarkoitus
 
@@ -47,11 +47,11 @@ ohjelman uudelleenkäynnistystä.
 Perusversion jälkeen sovellusta täyfennetään ajan salliessa esim. 
 seuraavilla toiminnallisuuksilla.
 
-Peliä voi pelata suurempi määrä kuin kaksi pelaajaa kerrallaan.
-Peliin voidaan lisätä käyttäjätunnuksen luomisen ja kirjautumisen 
+* Peliä voi pelata suurempi määrä kuin kaksi pelaajaa kerrallaan.
+* Peliin voidaan lisätä käyttäjätunnuksen luomisen ja kirjautumisen 
 mahdollisuus.
-Edellisen toiminnallisuuden toteutuessa peliin voidaan lisätä 
+* Edellisen toiminnallisuuden toteutuessa peliin voidaan lisätä 
 tietokanta, johon kerätään käyttäjien pelaamien 
 pelien tuloksia.
-Tuloksiin voidaan lisätä toiminnallisuus, jossa käyttäjät näkevät 
+* Tuloksiin voidaan lisätä toiminnallisuus, jossa käyttäjät näkevät 
 toisiaan vastaan pelaamiensa pelien tulokset.
