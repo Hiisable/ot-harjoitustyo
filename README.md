@@ -10,7 +10,7 @@
 
 #### Testaus
 
-Testit suoritetaan komennolla
-`mvn test`
-Testikattavuusraportti luodaan komennolla
-`mvn jacoco:report`
+Testit suoritetaan komennolla<br/>
+`mvn test`<br/>
+Testikattavuusraportti luodaan komennolla<br/>
+`mvn jacoco:report`<br/>
