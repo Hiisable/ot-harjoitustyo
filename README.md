@@ -1,14 +1,14 @@
 # **Ohjelmistotekniikka, harjoitustyö**
 ## **Yahtzee**
-### Dokumentaatio
+### **Dokumentaatio**
 
 * [Vaatimusmäärittely](https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Vaatimusmaarittely.md)
 
 * [Tyoaikakirjanpito](https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Tuntikirjanpito.md)
 
-### Komentorivikomennot
+### **Komentorivikomennot**
 
-#### Testaus
+#### **Testaus**
 
 Testit suoritetaan komennolla<br/>
 
