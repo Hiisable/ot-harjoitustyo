@@ -1,5 +1,5 @@
 # **Ohjelmistotekniikka, harjoitustyö**
-## Yahtzee**
+## **Yahtzee**
 ### Dokumentaatio
 
 * [Vaatimusmäärittely](https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Vaatimusmaarittely.md)
