@@ -6,6 +6,8 @@
 
 * [Tyoaikakirjanpito](https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Tuntikirjanpito.md)
 
+* [Arkkitehtuuri](https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Arkkitehtuuri.md)
+
 ## **Komentorivikomennot**
 
 ## **Testaus**
