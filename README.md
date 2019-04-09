@@ -4,9 +4,10 @@
 
 * [Vaatimusmäärittely](https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Vaatimusmaarittely.md)
 
+* [Arkkitehtuuri](https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Arkkitehtuuri.md)
+
 * [Tyoaikakirjanpito](https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Tuntikirjanpito.md)
 
-* [Arkkitehtuuri](https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Arkkitehtuuri.md)
 
 ## **Komentorivikomennot**
 
