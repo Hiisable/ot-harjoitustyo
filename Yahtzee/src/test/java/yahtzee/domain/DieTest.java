@@ -23,9 +23,16 @@ public class DieTest {
     
     
     @Test
-    public void rollingGivesRightValue() {
-        int value = die.rollDie();
-        assertEquals(value, die.getValue());
+    public void rollingWorksWhenNotSelected() {
+        die.rollDie();
+        assertTrue(die.getValue() != 0 && die.getValue() < 7);
+    }
+    
+    @Test
+    public void doesntRollWhenSelected() {
+        die.setSelected();
+        die.rollDie();
+        assertEquals(0, die.getValue());
     }
     
     @Test

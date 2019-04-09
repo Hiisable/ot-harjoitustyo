@@ -11,20 +11,21 @@ public class Die {
     public boolean selected;
     
     
-    public Die () {
+    public Die() {
         sides = 6;
         value = 0;
         selected = false;
     }
     
-    public int rollDie () {
-        Random score = new Random();
-        value = score.nextInt(sides) +1;
-        return getValue();
+    public void rollDie() {
+        if (!this.selected) {
+            Random score = new Random();
+            value = score.nextInt(sides) + 1;
+        }
     }
     
     public void setSelected() {
-        if(!selected) {
+        if (!selected) {
             this.selected = true;
         } else {
             this.selected = false;
