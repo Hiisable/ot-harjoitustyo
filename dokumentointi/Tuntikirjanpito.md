@@ -7,3 +7,4 @@
 | 2.4.  | 4 h    | Rakennettiin UI:n alku uudelleen javafx:llä swingin sijaan, ensimmäiset testit |
 | 3.4.  | 4 h    | Kehitettiin UI:ta lisää |
 | 9.4.  | 3 h    | UI:n kehitystä ja sovelluslogiikan suunnittelua |
+| yht   | 17 h   ||
