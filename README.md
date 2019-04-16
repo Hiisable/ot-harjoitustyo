@@ -1,5 +1,8 @@
 # **Ohjelmistotekniikka, harjoitustyö**
 ## **Yahtzee**
+
+Helsingin yliopiston kurssin Ohjelmistotekniikka aikana luotu ohjelma, jonka tarkoituksena on simuloida yahtzee-noppapeliä. Ensin sovelluksessa valitaan joko yhden tai kahden pelaajan peli, jonka jälkeen pelaajat kirjaavat itselleen nimen ja aloittavat pelin. Heitettyään noppia pelaajat kirjaavat noppien silmälukujen arvoja taulukkoon pelin sääntöjen mukaisesti.
+
 ## **Dokumentaatio**
 
 * [Vaatimusmäärittely](https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Vaatimusmaarittely.md)
