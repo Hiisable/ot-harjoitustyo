@@ -8,6 +8,9 @@
 
 * [Tyoaikakirjanpito](https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Tuntikirjanpito.md)
 
+## **Releaset**
+
+[Viikko 5](https://github.com/Hiisable/ot-harjoitustyo/releases/tag/Viikko5)
 
 ## **Komentorivikomennot**
 
