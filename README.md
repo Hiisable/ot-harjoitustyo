@@ -14,7 +14,7 @@
 
 ## **Komentorivikomennot**
 
-## **Testaus**
+### **Testaus**
 
 Testit suoritetaan komennolla<br/>
 
@@ -27,3 +27,19 @@ Testikattavuusraportti luodaan komennolla<br/>
 Sekä testit että raportin luominen suoritetaan komennolla<br/>
 
 `mvn test jacoco:report`<br/>
+
+### **Suoritettavan jarin generointi**
+
+Jar-tiedosto luodaan komennolla<br/>
+
+`mvn package`<br/>
+
+Tiedosto generoituu lokaatioon *target/*
+
+### **Checkstyle**
+
+Tiedoston checkstyle.xml mukaiset tarkistukset suoritetaan komennolla<br/>
+
+`mvn jxr:jxr checkstyle:checkstyle`<br/>
+
+Checkstylen luomaa raporttia voi tutkia selaimella, raportti löytyy lokaatiosta *target/site/checkstyle.html*
