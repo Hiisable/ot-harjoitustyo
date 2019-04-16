@@ -4,4 +4,4 @@
 
 ## **Nopanheittonapin painalluksen sekvenssikaavio**
 
-<img src"https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/kuvat/Dice%20Rolling%20Sequence.png">
+<img src="https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/kuvat/Dice%20Rolling%20Sequence.png">
