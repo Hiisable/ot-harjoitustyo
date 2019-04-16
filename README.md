@@ -23,3 +23,7 @@ Testit suoritetaan komennolla<br/>
 Testikattavuusraportti luodaan komennolla<br/>
 
 `mvn jacoco:report`<br/>
+
+Sekä testit että raportin luominen suoritetaan komennolla<br/>
+
+`mvn test jacoco:report`<br/>
