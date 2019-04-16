@@ -29,8 +29,18 @@ public class Dice {
         }
     }
     
+    public void setAllDice(int value) {
+        for (Die die: dice) {
+            die.setValue(value);
+        }
+    }
+    
     public void selectDie(int index) {
         dice.get(index).setSelected();
+    }
+    
+    public void setValueOfDie(int index, int value) {
+        dice.get(index).setValue(value);
     }
     
     public int getValueOfDie(int index) {
