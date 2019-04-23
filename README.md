@@ -7,7 +7,7 @@ Helsingin yliopiston kurssin Ohjelmistotekniikka aikana luotu ohjelma, jonka tar
 
 * [Vaatimusmäärittely](https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Vaatimusmaarittely.md)
 
-* [Arkkitehtuuri](https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Arkkitehtuuri.md)
+* [Arkkitehtuurikuvaus](https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Arkkitehtuuri.md)
 
 * [Käyttöohje](https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Kayttoohje.md)
 
