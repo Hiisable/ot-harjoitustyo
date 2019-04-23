@@ -5,6 +5,7 @@
 
 Ohjelman rakenne on kaksitasoinen ja sen pakkausrakenne on esitetty kuvassa:
 <br/>
+<br/>
 <img src="https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/kuvat/Pakkausrakenne.png">
 <br/>
 
