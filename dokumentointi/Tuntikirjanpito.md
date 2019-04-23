@@ -9,4 +9,6 @@
 | 9.4.  | 3 h    | UI:n kehitystä ja sovelluslogiikan suunnittelua |
 | 15.4. | 4 h    | Sovelluslogiikan tekoa, erityisesti pistekategorioiden koodausta |
 | 16.4. | 9 h    | Kaikenlaista, UI:n säätöä, pyrittiin saamaan pisteytysnappeja toimimaan, ei ihan täysin toimi vielä, lisää testejä |
-| yht   | 30 h   ||
+| 22.4. | 4,5 h  | Javadocin kirjoitusta sekä dokumentointia: käyttöohjeen ja arkkitehtuurikuvauksen kirjoittamista |
+| 23.4. | 6 h    | Lisää testejä ja pelin sääntöjen implementointia |
+| yht   | 40,5 h   ||
