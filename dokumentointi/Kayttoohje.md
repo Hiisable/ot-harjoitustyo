@@ -16,7 +16,7 @@ Ohjelma avautuu aloitusnäkymään:<br/>
 <img src="https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/kuvat/Aloitusn%C3%A4kym%C3%A4.png">
 <br/>
 Näkymästä valitaan nappia painamalla haluaako pelata yhden vai kahden pelaajan pelin. Napin painalluksella siirrytään seuraavaan näkymään:<br/>
-
+<br/>
 <img src="https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/kuvat/Nimenkirjausn%C3%A4kym%C3%A4.png">
 <br/>
 Tekstikenttään/kenttiin pelaajat syöttävät haluamansa nimen ja painavat Add-player nappia, jolloin nimi tallentuu pelijärjestelmään. 
