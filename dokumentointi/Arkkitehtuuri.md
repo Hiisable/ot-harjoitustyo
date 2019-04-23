@@ -4,6 +4,9 @@
 ## Rakenne
 
 Ohjelman rakenne on kaksitasoinen ja sen pakkausrakenne on esitetty kuvassa:
+<br/>
+<img src="https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/kuvat/Pakkausrakenne.png">
+<br/>
 
 Pakkauksista yahtzee.ui sisältää graafisen käyttöliittymän toteutuksen. Pakkaus yahtzee.domain sisältää taasen käyttöliittymästä eriytetyn sovelluslogiikan.
 
