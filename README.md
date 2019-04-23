@@ -57,4 +57,4 @@ Javadoc luodaan komennolla<br/>
 
 `mvn javadoc:javadoc`<br/>
 
-Luotu index.html-tiedosto löytyy lokaatiosta target/site/apidocs, josta sen voi avata selaimeen tarkasteluun.
+Komento luo *index.html* -tiedoston lokaatioon *target/site/apidocs*. Tiedostoa voi tarkastella avaamalla sen selaimeen.
