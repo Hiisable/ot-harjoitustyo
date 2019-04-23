@@ -26,6 +26,7 @@ Jokaiselle näkymälle luodaan koodissa oma Scene-olio. Pelaajien nimien kirjaus
 Pelisovelluksen toiminnallisuus hoidetaan luokkien YahtzeeControlle ja ScoreChecker kautta. ScoreChecker sisältää metodit pelaajien pistesuoritusten oikeellisuuksien ja pistemäärien tarkistamiseen. YahtzeeControllerin avulla hoidetaan varsinaiset pelitapahtumat kuten pelivuoron vaihtaminen, pistesuoritusten lisäys pelaajille ja noppien heittäminen. Käyttöliittymän toiminnoissa käytettäviä metodeja ovat esim.
 
 * void roll()
+* void changeTurn()
 * void scoreYahtzee()
 * void addPlayerOne(String name)
 * void addPlayerTwo(String name)
