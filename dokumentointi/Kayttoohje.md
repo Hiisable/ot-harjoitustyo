@@ -1,7 +1,7 @@
 
 # Käyttöohje
 
-Lataa tiedosto Yahtzee-1.0-SNAPSHOT.jar
+Lataa tiedosto Yahtzee.jar
 
 ## Ohjelman käynnistäminen
 
