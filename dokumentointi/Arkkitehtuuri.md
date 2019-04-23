@@ -31,7 +31,10 @@ Pelisovelluksen toiminnallisuus hoidetaan luokkien YahtzeeController ja ScoreChe
 * void addPlayerOne(String name)
 * void addPlayerTwo(String name)
 
-YahtzeeControllerin ja sovelluksen muiden osien suhteet ovat esitettynä kuvassa:
+YahtzeeControllerin ja sovelluslogiikan muiden osien suhteet ovat esitettynä kuvassa:
+<br/>
+<br/>
+<img src="https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/kuvat/uusi_luokkakaavio.png">
 
 ## **Nopanheittonapin painalluksen sekvenssikaavio**
 
