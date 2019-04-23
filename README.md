@@ -50,3 +50,11 @@ Tiedoston checkstyle.xml mukaiset tarkistukset suoritetaan komennolla<br/>
 `mvn jxr:jxr checkstyle:checkstyle`<br/>
 
 Checkstylen luomaa raporttia voi tutkia selaimella, raportti löytyy lokaatiosta *target/site/checkstyle.html*
+
+### **Javadoc**
+
+Javadoc luodaan komennolla<br/>
+
+`mvn javadoc:javadoc`<br/>
+
+Luotu index.html-tiedosto löytyy lokaatiosta target/site/apidocs, josta sen voi avata selaimeen tarkasteluun.
