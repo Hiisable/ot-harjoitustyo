@@ -65,6 +65,56 @@ public class PlayerTest {
         assertEquals(player.getUpperScore(), 25);
     }
     
+    @Test
+    public void clearingWorks() {
+        player.addScore(0, 5, true);
+        player.addScore(1, 10, true);
+        player.addScore(2, 15, true);
+        player.addScore(3, 20, true);
+        player.addScore(4, 25, true);
+        player.addScore(5, 30, true);
+        player.addScore(6, 15, false);
+        player.addScore(7, 20, false);
+        player.addScore(8, 10, false);
+        player.addScore(9, 22, false);
+        player.addScore(10, 15, false);
+        player.addScore(11, 24, false);
+        player.addScore(12, 28, false);
+        player.addScore(13, 23, false);
+        player.addScore(14, 50, false);
+        player.advanceTurnCount();
+        player.advanceTurnCount();
+        player.advanceTurnCount();
+        player.setRollCount(3);
+        player.clearAll();
+        for(int i = 0; i < 15; i++) {
+            assertEquals(player.getSpecificScore(i), 0);
+            assertFalse(player.checkIfScored(i));
+        }
+        assertEquals(player.getTurnCount(), 1);
+        assertEquals(player.getRollCount(), 0);
+    }
+    
+    @Test
+    public void advancingTurnWorks() {
+        player.setTurnCount(0);
+        player.advanceTurnCount();
+        player.advanceTurnCount();
+        player.advanceTurnCount();
+        player.advanceTurnCount();
+        assertEquals(player.getTurnCount(), 4);
+    }
+    
+    @Test
+    public void advancingRollsWorks() {
+        player.setRollCount(0);
+        player.advanceRollCount();
+        player.advanceRollCount();
+        player.advanceRollCount();
+        player.advanceRollCount();
+        assertEquals(player.getRollCount(), 4);
+    }
+    
     @BeforeClass
     public static void setUpClass() {
     }

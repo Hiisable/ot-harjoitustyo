@@ -29,6 +29,8 @@ public class YahtzeeUI extends Application {
     private Scene onePlayerName;
     private Scene twoPlayersName;
     private Scene gameScene;
+    private HBox dicePane;
+    private ArrayList<ToggleButton> dieButtons;
     private ArrayList<Button> upperScoringButtons;
     private ArrayList<Button> lowerScoringButtons;
     private ArrayList<Label> player1Scores;
@@ -48,14 +50,36 @@ public class YahtzeeUI extends Application {
         VBox gamePane = new VBox(10);
         HBox scoringPane = new HBox (50);
         
-        HBox dicePane = new HBox (40);
+        dieButtons = new ArrayList<> ();
+        dicePane = new HBox (40);
         dicePane.setAlignment(Pos.CENTER);
         ToggleButton die1 = new ToggleButton("" + yahtzeeController.getDice().getValueOfDie(0) + "");
+        die1.setOnAction(e-> {
+            yahtzeeController.getDice().selectDie(0);
+        });
+        dieButtons.add(die1);
         ToggleButton die2 = new ToggleButton("" + yahtzeeController.getDice().getValueOfDie(1) + "");
+        die2.setOnAction(e-> {
+            yahtzeeController.getDice().selectDie(1);
+        });
+        dieButtons.add(die2);
         ToggleButton die3 = new ToggleButton("" + yahtzeeController.getDice().getValueOfDie(2) + "");
+        die3.setOnAction(e-> {
+            yahtzeeController.getDice().selectDie(2);
+        });
+        dieButtons.add(die3);
         ToggleButton die4 = new ToggleButton("" + yahtzeeController.getDice().getValueOfDie(3) + "");
+        die4.setOnAction(e-> {
+            yahtzeeController.getDice().selectDie(3);
+        });
+        dieButtons.add(die4);
         ToggleButton die5 = new ToggleButton("" + yahtzeeController.getDice().getValueOfDie(4) + "");
+        die5.setOnAction(e-> {
+            yahtzeeController.getDice().selectDie(4);
+        });
+        dieButtons.add(die5);
         dicePane.getChildren().addAll(die1, die2, die3, die4, die5);
+        
         
         HBox rollPane = new HBox(10);
         Button rollButton = new Button("Roll Dice!");
@@ -80,43 +104,79 @@ public class YahtzeeUI extends Application {
         Button ones = new Button("Ones");
         ones.setOnAction(e-> {
                 yahtzeeController.scoreOnes();
-                player1Scores.get(0).setText("" + yahtzeeController.scoreChecker.checkOnes(yahtzeeController.getDice()) + "");
-                updatePlayerOneTotals();
+                if (yahtzeeController.getCurrentPlayer().equals(playerOne)) {
+                    player1Scores.get(0).setText("" + playerOne.getOnes() + "");
+                    yahtzeeController.changeTurn();
+                } else if (yahtzeeController.getCurrentPlayer().equals(playerTwo)) {
+                    player2Scores.get(0).setText("" + playerTwo.getOnes() + "");
+                    yahtzeeController.changeTurn();
+                }
+                updateTotals();
         });
         upperScoringButtons.add(ones);
         Button twos = new Button("Twos");
         twos.setOnAction(e-> {       
                 yahtzeeController.scoreTwos();
-                player1Scores.get(1).setText("" + yahtzeeController.scoreChecker.checkTwos(yahtzeeController.getDice()) * 2 + "");
-                updatePlayerOneTotals();             
+                if (yahtzeeController.getCurrentPlayer().equals(playerOne)) {
+                    player1Scores.get(1).setText("" + playerOne.getTwos() + "");
+                    yahtzeeController.changeTurn();
+                } else if (yahtzeeController.getCurrentPlayer().equals(playerTwo)) {
+                    player2Scores.get(1).setText("" + playerTwo.getTwos() + "");
+                    yahtzeeController.changeTurn();
+                }
+                updateTotals();
         });
         upperScoringButtons.add(twos);
         Button threes = new Button("Threes");
         threes.setOnAction(e-> {
-                yahtzeeController.scoreThrees(); 
-                player1Scores.get(2).setText("" + yahtzeeController.scoreChecker.checkThrees(yahtzeeController.getDice()) * 3 + "");
-                updatePlayerOneTotals();  
+                yahtzeeController.scoreThrees();
+                if (yahtzeeController.getCurrentPlayer().equals(playerOne)) {
+                    player1Scores.get(2).setText("" + playerOne.getThrees() + "");
+                    yahtzeeController.changeTurn();
+                } else if (yahtzeeController.getCurrentPlayer().equals(playerTwo)) {
+                    player2Scores.get(2).setText("" + playerTwo.getThrees() + "");
+                    yahtzeeController.changeTurn();
+                }
+                updateTotals();
         });
         upperScoringButtons.add(threes);
         Button fours = new Button("Fours");
         fours.setOnAction(e-> {
                 yahtzeeController.scoreFours();
-                player1Scores.get(3).setText("" + yahtzeeController.scoreChecker.checkFours(yahtzeeController.getDice()) * 4 + "");
-                updatePlayerOneTotals(); 
+                if (yahtzeeController.getCurrentPlayer().equals(playerOne)) {
+                    player1Scores.get(3).setText("" + playerOne.getFours() + "");
+                    yahtzeeController.changeTurn();
+                } else if (yahtzeeController.getCurrentPlayer().equals(playerTwo)) {
+                    player2Scores.get(3).setText("" + playerTwo.getFours() + "");
+                    yahtzeeController.changeTurn();
+                }
+                updateTotals(); 
         });
         upperScoringButtons.add(fours);
         Button fives = new Button("Fives");
         fives.setOnAction(e-> {    
-                yahtzeeController.scoreFives(); 
-                player1Scores.get(4).setText("" + yahtzeeController.scoreChecker.checkFives(yahtzeeController.getDice()) * 5 + "");                 
-                updatePlayerOneTotals();    
+                yahtzeeController.scoreFives();
+                if (yahtzeeController.getCurrentPlayer().equals(playerOne)) {
+                    player1Scores.get(4).setText("" + playerOne.getFives() + "");
+                    yahtzeeController.changeTurn();
+                } else if (yahtzeeController.getCurrentPlayer().equals(playerTwo)) {
+                    player2Scores.get(4).setText("" + playerTwo.getFives() + "");
+                    yahtzeeController.changeTurn();
+                }
+                updateTotals();    
         });
         upperScoringButtons.add(fives);
         Button sixes = new Button("Sixes");
         sixes.setOnAction(e-> {
                 yahtzeeController.scoreSixes(); 
-                player1Scores.get(5).setText("" + yahtzeeController.scoreChecker.checkSixes(yahtzeeController.getDice()) * 6 + ""); 
-                updatePlayerOneTotals();            
+                if (yahtzeeController.getCurrentPlayer().equals(playerOne)) {
+                    player1Scores.get(5).setText("" + playerOne.getSixes() + "");
+                    yahtzeeController.changeTurn();
+                } else if (yahtzeeController.getCurrentPlayer().equals(playerTwo)) {
+                    player2Scores.get(5).setText("" + playerTwo.getSixes() + "");
+                    yahtzeeController.changeTurn();
+                }
+                updateTotals();            
         });
         upperScoringButtons.add(sixes);
         
@@ -134,64 +194,118 @@ public class YahtzeeUI extends Application {
         Button smallStraight = new Button("Small Straight");
         smallStraight.setOnAction(e-> {
                 yahtzeeController.scoreSmallStraight();
-                player1Scores.get(8).setText("" + playerOne.getSmallStraight() + "");
-                updatePlayerOneTotals();
+                if (yahtzeeController.getCurrentPlayer().equals(playerOne)) {
+                    player1Scores.get(8).setText("" + playerOne.getSmallStraight() + "");
+                    yahtzeeController.changeTurn();
+                } else if (yahtzeeController.getCurrentPlayer().equals(playerTwo)) {
+                    player2Scores.get(8).setText("" + playerTwo.getSmallStraight() + "");
+                    yahtzeeController.changeTurn();
+                }
+                updateTotals();
         });
         lowerScoringButtons.add(smallStraight);
         Button largeStraight = new Button("Large Straight");
         largeStraight.setOnAction(e-> {
             yahtzeeController.scoreLargeStraight();
-            player1Scores.get(9).setText("" + playerOne.getLargeStraight() + "");
-            updatePlayerOneTotals();
+            if (yahtzeeController.getCurrentPlayer().equals(playerOne)) {
+                player1Scores.get(9).setText("" + playerOne.getLargeStraight() + "");
+                yahtzeeController.changeTurn();
+            } else if (yahtzeeController.getCurrentPlayer().equals(playerTwo)) {
+                player2Scores.get(9).setText("" + playerTwo.getLargeStraight() + "");
+                yahtzeeController.changeTurn();
+            }
+            updateTotals();
         });
         lowerScoringButtons.add(largeStraight);
         Button twoOfAKind = new Button("Two of a Kind");
         twoOfAKind.setOnAction(e-> {
             yahtzeeController.scoreTwoOfAKind();
-            player1Scores.get(10).setText("" + playerOne.getPair() + "");
-            updatePlayerOneTotals();
+            if (yahtzeeController.getCurrentPlayer().equals(playerOne)) {
+                player1Scores.get(10).setText("" + playerOne.getPair() + "");
+                yahtzeeController.changeTurn();
+            } else if (yahtzeeController.getCurrentPlayer().equals(playerTwo)) {
+                player2Scores.get(10).setText("" + playerTwo.getPair() + "");
+                yahtzeeController.changeTurn();
+            }
+            updateTotals();
         });
         lowerScoringButtons.add(twoOfAKind);
         Button twoPairs = new Button("Two Pairs");
         twoPairs.setOnAction(e-> {
             yahtzeeController.scoreTwoPairs();
-            player1Scores.get(11).setText("" + playerOne.getTwoPairs() + "");
-            updatePlayerOneTotals();
+            if (yahtzeeController.getCurrentPlayer().equals(playerOne)) {
+                player1Scores.get(11).setText("" + playerOne.getTwoPairs() + "");
+                yahtzeeController.changeTurn();
+            } else if (yahtzeeController.getCurrentPlayer().equals(playerTwo)) {
+                player2Scores.get(11).setText("" + playerTwo.getTwoPairs() + "");
+                yahtzeeController.changeTurn();
+            }
+            updateTotals();
         });
         lowerScoringButtons.add(twoPairs);
         Button threeOfAKind = new Button("Three of a Kind");
         threeOfAKind.setOnAction(e-> {
             yahtzeeController.scoreThreeOfAKind();
-            player1Scores.get(12).setText("" + playerOne.getThreeOfAKind() + "");
-            updatePlayerOneTotals();
+            if (yahtzeeController.getCurrentPlayer().equals(playerOne)) {
+                player1Scores.get(12).setText("" + playerOne.getThreeOfAKind() + "");
+                yahtzeeController.changeTurn();
+            } else if (yahtzeeController.getCurrentPlayer().equals(playerTwo)) {
+                player2Scores.get(12).setText("" + playerTwo.getThreeOfAKind() + "");
+                yahtzeeController.changeTurn();
+            }
+            updateTotals();
         });
         lowerScoringButtons.add(threeOfAKind);
         Button fourOfAKind = new Button("Four of a Kind");
         fourOfAKind.setOnAction(e-> {
             yahtzeeController.scoreFourOfAKind();
-            player1Scores.get(13).setText("" + playerOne.getFourOfAKind() + "");
-            updatePlayerOneTotals();
+            if (yahtzeeController.getCurrentPlayer().equals(playerOne)) {
+                player1Scores.get(13).setText("" + playerOne.getFourOfAKind() + "");
+                yahtzeeController.changeTurn();
+            } else if (yahtzeeController.getCurrentPlayer().equals(playerTwo)) {
+                player2Scores.get(13).setText("" + playerTwo.getFourOfAKind() + "");
+                yahtzeeController.changeTurn();
+            }
+            updateTotals();
         });
         lowerScoringButtons.add(fourOfAKind);
         Button fullHouse = new Button("Full House");
         fullHouse.setOnAction(e-> {
             yahtzeeController.scoreFullHouse();
-            player1Scores.get(14).setText("" + playerOne.getFullHouse() + "");
-            updatePlayerOneTotals();
+            if (yahtzeeController.getCurrentPlayer().equals(playerOne)) {
+                player1Scores.get(14).setText("" + playerOne.getFullHouse() + "");
+                yahtzeeController.changeTurn();
+            } else if (yahtzeeController.getCurrentPlayer().equals(playerTwo)) {
+                player2Scores.get(14).setText("" + playerTwo.getFullHouse() + "");
+                yahtzeeController.changeTurn();
+            }
+            updateTotals();
         });
         lowerScoringButtons.add(fullHouse);
         Button chance = new Button("Chance");
         chance.setOnAction(e-> {
             yahtzeeController.scoreChance();
-            player1Scores.get(15).setText("" + playerOne.getChance() + "");
-            updatePlayerOneTotals();
+            if (yahtzeeController.getCurrentPlayer().equals(playerOne)) {
+                player1Scores.get(15).setText("" + playerOne.getChance() + "");
+                yahtzeeController.changeTurn();
+            } else if (yahtzeeController.getCurrentPlayer().equals(playerTwo)) {
+                player2Scores.get(15).setText("" + playerTwo.getChance() + "");
+                yahtzeeController.changeTurn();
+            }
+            updateTotals();
         });
         lowerScoringButtons.add(chance);
         Button yahtzee = new Button("Yahtzee");
         yahtzee.setOnAction(e-> {
             yahtzeeController.scoreYahtzee();
-            player1Scores.get(16).setText("" + playerOne.getYahtzee() + "");
-            updatePlayerOneTotals();
+            if (yahtzeeController.getCurrentPlayer().equals(playerOne)) {
+                player1Scores.get(16).setText("" + playerOne.getYahtzee() + "");
+                yahtzeeController.changeTurn();
+            } else if (yahtzeeController.getCurrentPlayer().equals(playerTwo)) {
+                player2Scores.get(16).setText("" + playerTwo.getYahtzee() + "");
+                yahtzeeController.changeTurn();
+            }
+            updateTotals();
         });
         lowerScoringButtons.add(yahtzee);
         
@@ -259,9 +373,22 @@ public class YahtzeeUI extends Application {
         
         scoringPane.setAlignment(Pos.CENTER);
         scoringPane.getChildren().addAll(scoringButtonPane, player1ScorePane, player2ScorePane);
+        
+        HBox newGamePane = new HBox (10);
+        Button newGame = new Button ("New Game");
+        newGame.setOnAction(e-> {
+            yahtzeeController.newGame();
+            primaryStage.setScene(playerSelect);
+            scoringPane.getChildren().clear();
+            scoringPane.getChildren().addAll(scoringButtonPane, player1ScorePane, player2ScorePane);
+            gamePane.getChildren().clear();
+            gamePane.getChildren().addAll(dicePane, rollPane, scoringPane, newGamePane);
+        });
+        newGamePane.setAlignment(Pos.CENTER);
+        newGamePane.getChildren().add(newGame);
 
         
-        gamePane.getChildren().addAll(dicePane, rollPane, scoringPane);
+        gamePane.getChildren().addAll(dicePane, rollPane, scoringPane, newGamePane);
         gamePane.setBackground(new Background(new BackgroundFill(Color.GREEN, CornerRadii.EMPTY, Insets.EMPTY)));
         
         gameScene = new Scene(gamePane, 1000, 900);
@@ -332,12 +459,27 @@ public class YahtzeeUI extends Application {
         primaryStage.show();
     }
     
-    public void updatePlayerOneTotals() {
+    public void updateTotals() {
         player1Scores.get(6).setText("" + playerOne.getBonus() + "");
         player1Scores.get(7).setText("" + playerOne.getUpperScore() + ""); 
-        player1Scores.get(17).setText("" + playerOne.getScore() + "");  
+        player1Scores.get(17).setText("" + playerOne.getScore() + "");
+        player2Scores.get(6).setText("" + playerTwo.getBonus() + "");
+        player2Scores.get(7).setText("" + playerTwo.getUpperScore() + ""); 
+        player2Scores.get(17).setText("" + playerTwo.getScore() + "");
+        yahtzeeController.dice.setAllDice(0);
+        resetDice();
     }
-   
+    
+    public void resetDice() {
+        int i = 0;
+        for (ToggleButton button : dieButtons) {
+            if (button.isSelected()) {
+                button.fire();
+            }
+            button.setText("" + yahtzeeController.getDice().getValueOfDie(i) + "");
+            i++;
+        }
+    }
     
     @Override
     public void stop() {

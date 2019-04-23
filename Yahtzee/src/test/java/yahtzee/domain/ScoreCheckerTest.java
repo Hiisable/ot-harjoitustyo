@@ -37,16 +37,18 @@ public class ScoreCheckerTest {
 
     @Test
     public void straightTestsWork() {
-        dice.setValueOfDie(0,1);
-        dice.setValueOfDie(1,2);
-        dice.setValueOfDie(2,3);
-        dice.setValueOfDie(3,4);
-        dice.setValueOfDie(4,5);
+        dice.setValueOfDie(0, 1);
+        dice.setValueOfDie(1, 2);
+        dice.setValueOfDie(2, 3);
+        dice.setValueOfDie(3, 4);
+        dice.setValueOfDie(4, 5);
         assertTrue(checker.checkSmallStraight(dice));
         assertFalse(checker.checkLargeStraight(dice));
-        dice.setValueOfDie(0,6);
+        dice.setValueOfDie(0, 6);
         assertFalse(checker.checkSmallStraight(dice));
         assertTrue(checker.checkLargeStraight(dice));
+        dice.setValueOfDie(0, 5);
+        assertFalse(checker.checkLargeStraight(dice));
     }
     
     @Test
@@ -60,6 +62,31 @@ public class ScoreCheckerTest {
         assertEquals(18, checker.checkThreeOfAKindScore(dice));
         dice.setValueOfDie(0, 4);
         assertFalse(checker.checkThreeOfAKind(dice));
+        dice.setAllDice(1);
+        assertTrue(checker.checkThreeOfAKind(dice));
+        assertEquals(3, checker.checkThreeOfAKindScore(dice));
+        dice.setAllDice(2);
+        dice.setValueOfDie(0, 3);
+        assertTrue(checker.checkThreeOfAKind(dice));
+        assertEquals(6, checker.checkThreeOfAKindScore(dice));
+        dice.setValueOfDie(1, 3);
+        dice.setValueOfDie(2, 3);
+        assertEquals(9, checker.checkThreeOfAKindScore(dice));
+        dice.setValueOfDie(3, 3);
+        assertEquals(9, checker.checkThreeOfAKindScore(dice));
+        dice.setAllDice(4);
+        dice.setValueOfDie(0, 5);
+        dice.setValueOfDie(1, 6);
+        assertTrue(checker.checkThreeOfAKind(dice));
+        assertEquals(12, checker.checkThreeOfAKindScore(dice));
+        dice.setValueOfDie(3, 5);
+        dice.setValueOfDie(4, 5);
+        assertTrue(checker.checkThreeOfAKind(dice));
+        assertEquals(15, checker.checkThreeOfAKindScore(dice));
+        dice.setValueOfDie(3, 1);
+        assertFalse(checker.checkThreeOfAKind(dice));
+        assertEquals(0, checker.checkThreeOfAKindScore(dice));
+        
     }
     
     @Test
@@ -75,6 +102,20 @@ public class ScoreCheckerTest {
         assertEquals(12, checker.checkSecondLargestPair(dice));
         dice.setValueOfDie(0,5);
         assertFalse(checker.checkFourOfAKind(dice));
+        dice.setAllDice(4);
+        assertEquals(16, checker.checkFourOfAKindScore(dice));
+        dice.setAllDice(3);
+        assertEquals(12, checker.checkFourOfAKindScore(dice));
+        dice.setAllDice(2);
+        assertEquals(8, checker.checkFourOfAKindScore(dice));
+        dice.setAllDice(1);
+        assertEquals(4, checker.checkFourOfAKindScore(dice));
+        dice.setValueOfDie(0, 6);
+        dice.setValueOfDie(1, 6);
+        assertFalse(checker.checkFourOfAKind(dice));
+        dice.setAllDice(5);
+        dice.setValueOfDie(0, 6);
+        assertEquals(20, checker.checkFourOfAKindScore(dice));       
     }
     
     @Test
@@ -88,6 +129,43 @@ public class ScoreCheckerTest {
         assertEquals(6, checker.checkPairForFullHouse(dice));
         dice.setValueOfDie(0, 2);
         assertFalse(checker.checkFullHouse(dice));
+        dice.setValueOfDie(0, 3);
+        assertTrue(checker.checkFullHouse(dice));
+        assertEquals(12, checker.checkPairForFullHouse(dice));
+        dice.setValueOfDie(1, 5);
+        dice.setValueOfDie(2, 5);
+        assertEquals(10, checker.checkPairForFullHouse(dice));
+        dice.setValueOfDie(1, 2);
+        dice.setValueOfDie(0, 4);
+        dice.setValueOfDie(3, 4);
+        assertEquals(8, checker.checkPairForFullHouse(dice));
+        assertFalse(checker.checkFullHouse(dice));
+        dice.setValueOfDie(0, 2);
+        assertEquals(4, checker.checkPairForFullHouse(dice));
+        dice.setAllDice(6);
+        dice.setValueOfDie(0, 1);
+        dice.setValueOfDie(1, 1);
+        assertEquals(2, checker.checkPairForFullHouse(dice));
+    }
+    
+    @Test
+    public void checkPairWorks() {
+        dice.setAllDice(1);
+        assertTrue(checker.checkPair(dice));
+        dice.setValueOfDie(0, 2);
+        dice.setValueOfDie(1, 2);
+        dice.setValueOfDie(2, 2);
+        dice.setValueOfDie(3, 3);
+        assertTrue(checker.checkPair(dice));
+        dice.setValueOfDie(0, 4);
+        dice.setValueOfDie(1, 5);
+        assertFalse(checker.checkPair(dice));
+        dice.setValueOfDie(0, 5);
+        assertTrue(checker.checkPair(dice));
+        dice.setAllDice(6);
+        assertTrue(checker.checkPair(dice)); 
+        dice.setAllDice(4);
+        assertTrue(checker.checkPair(dice)); 
     }
     
     @Test
@@ -136,6 +214,21 @@ public class ScoreCheckerTest {
         assertEquals(8, checker.checkLargestPair(dice));
         assertEquals(4, checker.checkSecondLargestPair(dice));
     }
+    
+    @Test
+    public void checkingTwoPairsWorks() {
+        dice.setAllDice(5);
+        assertTrue(checker.checkTwoPairs(dice));
+        dice.setValueOfDie(0, 3);
+        assertTrue(checker.checkTwoPairs(dice));
+        dice.setValueOfDie(1, 3);
+        assertTrue(checker.checkTwoPairs(dice));
+        dice.setValueOfDie(2, 2);
+        dice.setValueOfDie(3, 4);
+        assertFalse(checker.checkTwoPairs(dice));
+    }
+    
+
     
     @BeforeClass
     public static void setUpClass() {
