@@ -9,6 +9,8 @@ Helsingin yliopiston kurssin Ohjelmistotekniikka aikana luotu ohjelma, jonka tar
 
 * [Arkkitehtuuri](https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Arkkitehtuuri.md)
 
+* [Käyttöohje](https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Kayttoohje.md)
+
 * [Tyoaikakirjanpito](https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Tuntikirjanpito.md)
 
 ## **Releaset**
