@@ -21,7 +21,7 @@ Näkymästä valitaan nappia painamalla haluaako pelata yhden vai kahden pelaaja
 <br/>
 Tekstikenttään/kenttiin pelaajat syöttävät haluamansa nimen ja painavat Add-player nappia, jolloin nimi tallentuu pelijärjestelmään. 
 Nimien kirjaamisen jälkeen siirrytään varsinaiseen pelinäkymään painamalla Start game! -nappia.<br/>
-
+<br/>
 <img src="https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/kuvat/Pelin%C3%A4kym%C3%A4.png">
 <br/>
 Pelinäkymässä pelaajat heittävät noppia painamalla Roll dice! -nappia. Noppia, joita ei haluta heittää, voidaan klikata, 
