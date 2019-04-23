@@ -15,9 +15,9 @@ Pakkauksista yahtzee.ui sisältää graafisen käyttöliittymän toteutuksen. Pa
 
 Käyttöliittymä koostuu kolmesta erillisestä näkymästä, jotka ovat:
 
-Pelimoodin valinta
-Pelaajien nimien kirjaaminen
-Varsinainen pelinäkymä
+* Pelimoodin valinta
+* Pelaajien nimien kirjaaminen
+* Varsinainen pelinäkymä
 
 Jokaiselle näkymälle luodaan koodissa oma Scene-olio. Pelaajien nimien kirjaus on toteutettu kahtena erillisenä Scene-olion, joista toisessa kirjataan yhden pelaajan nimi ja toisessa molempien pelaajien nimi riippuen aloitusnäkymässä valitusta pelimoodista. Scene-olioista näkyy kerrallaan yksi stageen sijoitettuna.
 
@@ -25,16 +25,12 @@ Jokaiselle näkymälle luodaan koodissa oma Scene-olio. Pelaajien nimien kirjaus
 
 Pelisovelluksen toiminnallisuus hoidetaan luokkien YahtzeeControlle ja ScoreChecker kautta. ScoreChecker sisältää metodit pelaajien pistesuoritusten oikeellisuuksien ja pistemäärien tarkistamiseen. YahtzeeControllerin avulla hoidetaan varsinaiset pelitapahtumat kuten pelivuoron vaihtaminen, pistesuoritusten lisäys pelaajille ja noppien heittäminen. Käyttöliittymän toiminnoissa käytettäviä metodeja ovat esim.
 
-void roll()
-void scoreYahtzee()
-void addPlayerOne(String name)
-void addPlayerTwo(String name)
+* void roll()
+* void scoreYahtzee()
+* void addPlayerOne(String name)
+* void addPlayerTwo(String name)
 
 YahtzeeControllerin ja sovelluksen muiden osien suhteet ovat esitettynä kuvassa:
-
-## **Alustava luokkakaavio**
-
-<img src="https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/kuvat/alustava_luokkakaavio.png">
 
 ## **Nopanheittonapin painalluksen sekvenssikaavio**
 
