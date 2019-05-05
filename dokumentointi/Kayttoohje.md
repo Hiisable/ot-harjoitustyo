@@ -26,8 +26,10 @@ Nimien kirjaamisen jälkeen siirrytään varsinaiseen pelinäkymään painamalla
 ## Varsinainen peli
 
 Pelaajan painettua Start game-nappia avautuu varsinainen pelinäkymä:<br/>
+
 <img src="https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/kuvat/Pelinakyma.jpg">
 <br/>
+
 Pelinäkymässä pelaajat heittävät noppia painamalla Roll dice! -nappia. Noppia, joita ei haluta heittää, voidaan klikata, 
 jolloin niiden silmäluvut säilyvät pelaajan vuoron ajan. Noppia voidaan klikata uudelleen, jolloin niitä voidaan jälleen heittää. 
 Saatuaan haluamansa tuloksen tai enintään kolmen saman vuoron aikana tapahtuneen heittokierroksen jälkeen pelaaja
