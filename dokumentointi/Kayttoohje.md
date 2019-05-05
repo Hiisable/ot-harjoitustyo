@@ -33,7 +33,9 @@ jolloin niiden silmäluvut säilyvät pelaajan vuoron ajan. Noppia voidaan klika
 Saatuaan haluamansa tuloksen tai enintään kolmen saman vuoron aikana tapahtuneen heittokierroksen jälkeen pelaaja
 kirjaa itselleen pisteensä haluamaansa käyttämättä olevaan kategoriaan painamalla sen kohdalla olevaa nappia. Uusi peli voidaan
 aloittaa pelaamatta kesken olevaa peliä loppuun asti painamalla New Game-nappia, josta siirrytään takaisin pelaajien määrän valintaan.
-<br/>
+
 Jos peli pelataan loppuun asti peli ilmoittaa voittajan tai tasapelin sattuessa kertoo pelin päättyneen tasapeliin.<br/>
+
 <img src="https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/kuvat/GameOver.png"><br/>
+
 Painamalla Yes näkymä vaihtuu pelaajien määrän valintaan, muussa tapauksessa ohjelma sulkeutuu.
