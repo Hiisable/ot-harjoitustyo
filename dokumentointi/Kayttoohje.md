@@ -22,9 +22,16 @@ Näkymästä valitaan nappia painamalla haluaako pelata yhden vai kahden pelaaja
 Tekstikenttään/kenttiin pelaajat syöttävät haluamansa nimen ja painavat Add-player nappia, jolloin nimi tallentuu pelijärjestelmään. 
 Nimien kirjaamisen jälkeen siirrytään varsinaiseen pelinäkymään painamalla Start game! -nappia.<br/>
 <br/>
-<img src="https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/kuvat/Pelin%C3%A4kym%C3%A4.png">
+<img src="https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/kuvat/Pelinakyma.jpg">
 <br/>
 Pelinäkymässä pelaajat heittävät noppia painamalla Roll dice! -nappia. Noppia, joita ei haluta heittää, voidaan klikata, 
 jolloin niiden silmäluvut säilyvät pelaajan vuoron ajan. Noppia voidaan klikata uudelleen, jolloin niitä voidaan jälleen heittää. 
 Saatuaan haluamansa tuloksen tai enintään kolmen saman vuoron aikana tapahtuneen heittokierroksen jälkeen pelaaja
-kirjaa itselleen pisteensä haluamaansa käyttämättä olevaan kategoriaan painamalla sen kohdalla olevaa nappia.
+kirjaa itselleen pisteensä haluamaansa käyttämättä olevaan kategoriaan painamalla sen kohdalla olevaa nappia. Uusi peli voidaan
+aloittaa pelaamatta kesken olevaa peliä loppuun asti painamalla New Game-nappia, josta siirrytään takaisin pelaajien määrän valintaan.
+
+Jos peli pelataan loppuun asti peli ilmoittaa voittajan tai tasapelin sattuessa kertoo pelin päättyneen tasapeliin.
+<br/>
+<img src="https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/kuvat/GameOver.png">
+<br/>
+Painamalla Yes näkymä vaihtuu pelaajien määrän valintaan, muussa tapauksessa ohjelma sulkeutuu.
