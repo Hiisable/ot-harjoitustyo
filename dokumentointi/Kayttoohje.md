@@ -35,5 +35,4 @@ Jos peli pelataan loppuun asti peli ilmoittaa voittajan tai tasapelin sattuessa 
 <br/>
 <img src="https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/kuvat/GameOver.png">
 <br/>
-<br/>
 Painamalla Yes näkymä vaihtuu pelaajien määrän valintaan, muussa tapauksessa ohjelma sulkeutuu.
