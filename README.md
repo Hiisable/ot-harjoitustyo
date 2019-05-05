@@ -11,6 +11,8 @@ Helsingin yliopiston kurssin Ohjelmistotekniikka aikana luotu ohjelma, jonka tar
 
 * [Käyttöohje](https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Kayttoohje.md)
 
+* [Testausdokumentti](https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Testaus.md)
+
 * [Tyoaikakirjanpito](https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/Tuntikirjanpito.md)
 
 ## **Releaset**
