@@ -19,11 +19,11 @@ Käyttöliittymä koostuu kolmesta erillisestä näkymästä, jotka ovat:
 * Pelaajien nimien kirjaaminen
 * Varsinainen pelinäkymä
 
-Jokaiselle näkymälle luodaan koodissa oma Scene-olio. Pelaajien nimien kirjaus on toteutettu kahtena erillisenä Scene-olion, joista toisessa kirjataan yhden pelaajan nimi ja toisessa molempien pelaajien nimi riippuen aloitusnäkymässä valitusta pelimoodista. Scene-olioista näkyy kerrallaan yksi stageen sijoitettuna.
+Jokaiselle näkymälle luodaan koodissa oma _Scene_-olio. Pelaajien nimien kirjaus on toteutettu kahtena erillisenä _Scene_-olion, joista toisessa kirjataan yhden pelaajan nimi ja toisessa molempien pelaajien nimi riippuen aloitusnäkymässä valitusta pelimoodista. _Scene_-olioista näkyy kerrallaan yksi stageen sijoitettuna.
 
 ## Sovelluslogiikka
 
-Pelisovelluksen toiminnallisuus hoidetaan luokkien YahtzeeController ja ScoreChecker kautta. ScoreChecker sisältää metodit pelaajien pistesuoritusten oikeellisuuksien ja pistemäärien tarkistamiseen. YahtzeeControllerin avulla hoidetaan varsinaiset pelitapahtumat kuten pelivuoron vaihtaminen, pistesuoritusten lisäys pelaajille ja noppien heittäminen. Käyttöliittymän toiminnoissa käytettäviä metodeja ovat esim.
+Pelisovelluksen toiminnallisuus hoidetaan luokkien _YahtzeeController_ ja _ScoreChecker_ kautta. _ScoreChecker_ sisältää metodit pelaajien pistesuoritusten oikeellisuuksien ja pistemäärien tarkistamiseen. _YahtzeeControllerin_ avulla hoidetaan varsinaiset pelitapahtumat kuten pelivuoron vaihtaminen, pistesuoritusten lisäys pelaajille ja noppien heittäminen. Käyttöliittymän toiminnoissa käytettäviä metodeja ovat esim.
 
 * void roll()
 * void changeTurn()
@@ -31,7 +31,7 @@ Pelisovelluksen toiminnallisuus hoidetaan luokkien YahtzeeController ja ScoreChe
 * void addPlayerOne(String name)
 * void addPlayerTwo(String name)
 
-YahtzeeControllerin ja sovelluslogiikan muiden osien suhteet ovat esitettynä kuvassa:
+_YahtzeeControllerin_ ja sovelluslogiikan muiden osien suhteet ovat esitettynä kuvassa:
 <br/>
 <br/>
 <img src="https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/kuvat/uusi_luokkakaavio.png">
@@ -46,9 +46,9 @@ Pelinäkymässä painettaessa Roll dice-nappia koodin suoritus etenee seuraavan 
 
 <img src="https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/kuvat/Dice%20Rolling%20Sequence.png">
 
-Napin painallukseen reagoiva tapahtumankäsittelijä kutsuu YahtzeeController-luokan metodia roll. Tämä kutsuu edelleen Dice-luokan metodia rollDice. Dice-luokka sisältää taulukkolistan pelissä käytettävistä nopista, jonka sisältävien jokaisen nopan kohdalla kutsutaan Die-luokan metodia rollDie. Die-luokan rollDie-metodi tarkistaa ensin ehdon onko nopan selected-muuttujan arvo true vai false, mikäli tulos on false luo metodi uuden Random-luokan ja kutsuu tämän metodia nextInt, jolle annetaan parametrina nopan sivujen lukumäärä. Arvoon lisätään +1, koska arvottavat luvut alkavat nollasta. nextInt-Metodi palauttaa arvotun kokonaisluvun, joka asetetaan Die-olion muuttujan value-arvoksi.
+Napin painallukseen reagoiva tapahtumankäsittelijä kutsuu _YahtzeeController_-luokan metodia _roll_. Tämä kutsuu edelleen _Dice_-luokan metodia _rollDice_. _Dice_-luokka sisältää taulukkolistan pelissä käytettävistä nopista, jonka sisältävien jokaisen nopan kohdalla kutsutaan _Die_-luokan metodia _rollDie_. _Die_-luokan _rollDie_-metodi tarkistaa ensin ehdon onko nopan selected-muuttujan arvo true vai false, mikäli tulos on false luo metodi uuden _Random_-luokan ja kutsuu tämän metodia _nextInt_, jolle annetaan parametrina nopan sivujen lukumäärä. Arvoon lisätään +1, koska arvottavat luvut alkavat nollasta. _nextInt_-Metodi palauttaa arvotun kokonaisluvun, joka asetetaan _Die_-olion muuttujan value -arvoksi.
 
-Kun kaikille nopille on arvottu uusi arvo napin painalluksen koodin suoritus jatkuu eteenpäin, jolloin kutsutaan noppia käyttöliittymässä kuvaavien togglenappien setText-metodia, jonka parametrissa kutsutaan YahtzeeController-luokan metodia getDice. Metodi palauttaa Dice-olion, jolta kutsutaan metodia getValueOfDie, jonka parametriksi annetaan halutun nopan indeksi nopat sisältävässä taulukkolistassa. Tämä metodi kutsuu edelleen arrayListin get-metodia, jolla haetaan listasta parametrina annetusta indeksistä löytyvä Die-olio. Die-luokasta kutsutaan metodia getValue, joka palauttaa nopan sen hetkisen value-muuttujan arvon. Sama toistetaan jokaisen noppaa kuvaavan togglenapin kohdalla.
+Kun kaikille nopille on arvottu uusi arvo napin painalluksen koodin suoritus jatkuu eteenpäin, jolloin kutsutaan noppia käyttöliittymässä kuvaavien togglenappien _setText_-metodia, jonka parametrissa kutsutaan _YahtzeeController_-luokan metodia _getDice_. Metodi palauttaa _Dice_-olion, jolta kutsutaan metodia _getValueOfDie_, jonka parametriksi annetaan halutun nopan indeksi nopat sisältävässä taulukkolistassa. Tämä metodi kutsuu edelleen arrayListin _get_-metodia, jolla haetaan listasta parametrina annetusta indeksistä löytyvä _Die_-olio. _Die_-luokasta kutsutaan metodia _getValue_, joka palauttaa nopan sen hetkisen value-muuttujan arvon. Sama toistetaan jokaisen noppaa kuvaavan togglenapin kohdalla.
 
 #### Pistesuorituksen kirjaaminen
 
@@ -56,17 +56,17 @@ Seuraavassa sekvenssikaaviossa kuvataan tilannetta, jossa yhden pelaajan peliss�
 
 <img src="https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/kuvat/Scoring%20Sequence.png">
 
-Tapahtumankäsittelijä reagoi jälleen napin painallukseen. Kuvasta on jätetty pois ensimmäisenä tapahtuva ehtojen tarkistus, jossa kutsutaan YahtzeeController-luokan getCurrentPlayer metodia, jonka palautusta verrataan equals-metodilla eri pelaajiin. Tämän lisäksi ehdoissa tarkistetaan onko kyseisestä kategoriasta jo kirjattu pelaajalle pistesuoritus. Ehdon jälkeen tapahtumankäsittelijä kutsuu YahtzeeController-luokan scoreOnes-metodia. 
+Tapahtumankäsittelijä reagoi jälleen napin painallukseen. Kuvasta on jätetty pois ensimmäisenä tapahtuva ehtojen tarkistus, jossa kutsutaan _YahtzeeController_-luokan _getCurrentPlayer_ metodia, jonka palautusta verrataan _equals_-metodilla eri pelaajiin. Tämän lisäksi ehdoissa tarkistetaan onko kyseisestä kategoriasta jo kirjattu pelaajalle pistesuoritus. Ehdon jälkeen tapahtumankäsittelijä kutsuu _YahtzeeController_-luokan _scoreOnes_-metodia. 
 
-Seuraavaksi kutsutaan ScoreChecker-luokan metodia checkOnes, joka käy nopanheittosekvenssin tavoin läpi kaikki nopat kutsuen niiden getValue-metodia dice-luokan kautta. Lopuksi palautetaan ykkösten määrä kokonaislukuna. Seuraavaksi tarkastetaan onko pelaajalla kirjattuna pistesuoritusta kutsumalla Player-luokan metodia checkIfScored, jonka parametrina on tarkastellun pistesuorituksen indeksi. Palautuksen ollessa false, kutsutaan setOnes-metodia, joka asettaa pelaajalle pistesuorituksen. Tämän lisäksi pistesuoritus kirjataan kutsumalla Player-luokan metodia addScore, joka edelleen kutsuu Player-luokan metodeja addScoreToCheckArray, jonka parametrina on pistesuorituksen indeksi, ja addScoreToScoreArray, jonka parametreina ovat pistesuorituksen indeksi sekä pistesuorituksen arvo kokonaislukuna. addScore-metodi tarkistaa myös kuuluuko pistesuoritus yahtzee-pelin ylempään kategoriaan ja täyttyykö pistesuorituksen kirjaamisen jälkeen mahdollinen bonusehto, mutta tätä ei ole kuvattu kaaviossa.
+Seuraavaksi kutsutaan _ScoreChecker_-luokan metodia _checkOnes_, joka käy nopanheittosekvenssin tavoin läpi kaikki nopat kutsuen niiden _getValue_-metodia _Dice_-luokan kautta. Lopuksi palautetaan ykkösten määrä kokonaislukuna. Seuraavaksi tarkastetaan onko pelaajalla kirjattuna pistesuoritusta kutsumalla _Player_-luokan metodia _checkIfScored_, jonka parametrina on tarkastellun pistesuorituksen indeksi. Palautuksen ollessa false, kutsutaan _setOnes_-metodia, joka asettaa pelaajalle pistesuorituksen. Tämän lisäksi pistesuoritus kirjataan kutsumalla _Player_-luokan metodia _addScore_, joka edelleen kutsuu _Player_-luokan metodeja _addScoreToCheckArray_, jonka parametrina on pistesuorituksen indeksi, ja _addScoreToScoreArray_, jonka parametreina ovat pistesuorituksen indeksi sekä pistesuorituksen arvo kokonaislukuna. _addScore_-metodi tarkistaa myös kuuluuko pistesuoritus yahtzee-pelin ylempään kategoriaan ja täyttyykö pistesuorituksen kirjaamisen jälkeen mahdollinen bonusehto, mutta tätä ei ole kuvattu kaaviossa.
 
-Tämän jälkeen eteenpäin siirryttäessä päivitetään käyttöliittymää asettamalla pistesuoritusta käyttöliittymässä kuvaavan Labelin tekstiksi pistesuorituksen arvo, jota ei ole esitetty kaaviossa. Lopuksi kutsutaan yahtzeeUI-käyttäliittymän omaa metodia scoreButtonEndSequence, joka sisältää metodit changeTurn, turnDialog, updateTotals ja ehdon, jolloin käytetään metodia checkGameState.
+Tämän jälkeen eteenpäin siirryttäessä päivitetään käyttöliittymää asettamalla pistesuoritusta käyttöliittymässä kuvaavan Labelin tekstiksi pistesuorituksen arvo, jota ei ole esitetty kaaviossa. Lopuksi kutsutaan _YahtzeeUI_-käyttäliittymän omaa metodia _scoreButtonEndSequence_, joka sisältää metodit _changeTurn_, _turnDialog_, _updateTotals_ ja ehdon, jolloin käytetään metodia _checkGameState_.
 
-Loppusekvenssin aikana kutsutaan ensin yahtzeeControllerin metodia changeTurn, joka kasvattaa aktiivisen pelaajan käytettyjen vuorojen määrää kutsumalla Player-luokan metodia advanceTurnCount, jonka jälkeen asetetaan käytettyjen heittojen määrä nollaan kutsumalla Player-luokan metodia setRollCount sen parametrin ollessa 0. Esimerkkitapauksessa oli kyse yhden pelaajan pelistä, mutta kahden pelaajan pelissä metodi vaihtaisi myös aktiiviseksi pelaajaksi toisen pelaajan. 
+Loppusekvenssin aikana kutsutaan ensin _YahtzeeControllerin_ metodia _changeTurn_, joka kasvattaa aktiivisen pelaajan käytettyjen vuorojen määrää kutsumalla _Player_-luokan metodia _advanceTurnCount_, jonka jälkeen asetetaan käytettyjen heittojen määrä nollaan kutsumalla _Player_-luokan metodia _setRollCount_ sen parametrin ollessa 0. Esimerkkitapauksessa oli kyse yhden pelaajan pelistä, mutta kahden pelaajan pelissä metodi vaihtaisi myös aktiiviseksi pelaajaksi toisen pelaajan. 
 
-turnDialog-Metodi asettaa pelinäkymän dialogi-labelin tekstin kertomaan aktiivisen pelaajan vuorosta ja updateTotals metodi päivittää pelinäkymän pistesaldot sekä asettaa kaikkien noppien arvoiksi nollat kutsumalla dice-luokan metodia setAllDice, jolle on annettu parametriksi 0. updateTotals-Metodi kutsuu myös käyttöliittymän metodia resetDice, joka aiheuttaa tapahtumasekvenssin jokaisessa noppaakuvaavassa togglenapissa, joka on ollut aktivoituna vuoron aikana ja asettaa ne oletustilaan.
+_turnDialog_-Metodi asettaa pelinäkymän dialogi-labelin tekstin kertomaan aktiivisen pelaajan vuorosta ja _updateTotals_-metodi päivittää pelinäkymän pistesaldot sekä asettaa kaikkien noppien arvoiksi nollat kutsumalla _Dice_-luokan metodia _setAllDice_, jolle on annettu parametriksi 0. _updateTotals_-Metodi kutsuu myös käyttöliittymän metodia _resetDice_, joka aiheuttaa tapahtumasekvenssin jokaisessa noppaakuvaavassa togglenapissa, joka on ollut aktivoituna vuoron aikana ja asettaa ne oletustilaan.
 
-Viimeisenä tarkistetaan pelitilanne kutsumalla YahtzeeController-luokan metodia checkGameState, joka palauttaa arvon false ja peli jatkuu.
+Viimeisenä tarkistetaan pelitilanne kutsumalla _YahtzeeController_-luokan metodia _checkGameState_, joka palauttaa arvon false ja peli jatkuu.
 
 #### Muut toiminnallisuudet
 
@@ -76,7 +76,7 @@ Kaikkien pistesuoritusten kirjaamiseen käytettävien nappien logiikka noudattaa
 
 ### Käyttöliittymä
 
-Käyttöliittymä on koodattu lähes kokonaan YahtzeeUI-luokan metodissa start. Näkymät voitaisiin jakaa niille omiin luokkiin ja FXML voitaisiin ottaa käyttöön. Graafista ulkonäköä voitaisiin myös luonnollisesti parantaa huomattavasti.
+Käyttöliittymä on koodattu lähes kokonaan _YahtzeeUI_-luokan metodissa _start_. Näkymät voitaisiin jakaa niille omiin luokkiin ja FXML voitaisiin ottaa käyttöön. Graafista ulkonäköä voitaisiin myös luonnollisesti parantaa huomattavasti.
 
 ### Sovelluslogiikka
 
