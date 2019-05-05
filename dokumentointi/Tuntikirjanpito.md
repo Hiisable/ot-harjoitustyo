@@ -11,4 +11,6 @@
 | 16.4. | 9 h    | Kaikenlaista, UI:n säätöä, pyrittiin saamaan pisteytysnappeja toimimaan, ei ihan täysin toimi vielä, lisää testejä |
 | 22.4. | 4,5 h  | Javadocin kirjoitusta sekä dokumentointia: käyttöohjeen ja arkkitehtuurikuvauksen kirjoittamista |
 | 23.4. | 6 h    | Lisää testejä ja pelin sääntöjen implementointia |
-| yht   | 40,5 h   ||
+| 3.5.  | 3 h    | Pääohjelman loppuun koodaus |
+| 5.5.  | 9 h    | Loput testit ja dokumentoinnin tekoa loppupalautukseen |
+| yht   | 52,5 h   ||
