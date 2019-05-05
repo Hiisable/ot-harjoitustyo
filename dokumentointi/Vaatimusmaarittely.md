@@ -3,7 +3,7 @@
 
 ### Sovelluksen tarkoitus
 
-Sovelluksen on tarkoitus olla yahtzee -pelisovellus. Sovellusta voi 
+Sovellus on yahtzee-pelisovellus. Sovellusta voi 
 pelata yksi tai kaksi pelaajaa vuorotellen. Yahtzee pelissä on tarkoitus 
 heittää viittä noppaa ja kerätä pelin sääntöjen mukaisesti pisteitä 
 noppien silmäluvuista.
@@ -16,12 +16,13 @@ Sovelluksen ainoa käyttäjärooli on pelaaja eli normaali käyttäjä.
 
 Sovellus koostuu kolmesta eri näkymästä, jotka on esitetty kuvassa.
 
-<img src="https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/kuvat/K%C3%A4ytt%C3%B6liittym%C3%A4%20vaatimusm%C3%A4%C3%A4rittelyyn.png">
+<img src="https://github.com/Hiisable/ot-harjoitustyo/blob/master/dokumentointi/kuvat/Kayttoliittyma%20vaatimusmaarittelyyn2.jpg">
 
 Sovellus aukeaa näkymään, jossa valitaan kuinka monta käyttäjää haluaa 
 pelata. Seuraavassa näkymässä pelaajat kirjoittavat nimensä kenttään. 
 Nimien kirjaamisen jälkeen aukeaa varsinainen pelinäkymä, jossa pelaajat 
-heittävät noppia ja kirjaavat pisteensä taulukkoon.
+heittävät noppia ja kirjaavat pisteensä taulukkoon. Painamalla New Game-nappulaa
+päästään takaisin pelaajien määrän valintaan.
 
 ### Perusversion tarjoama toiminnallisuus
 
@@ -39,7 +40,8 @@ heittävät noppia ja kirjaavat pisteensä taulukkoon.
 mukaisesti.
 
 * Pelin tulee kertoa käyttäjille heidän pistesaldonsa sääntöjen mukaisesti 
-ja pelin lopuksi kertoa pelin voittaja.
+ja pelin lopuksi kertoa pelin voittaja tai tasapelin tapauksessa kertoa pelin
+päättyneen tasapeliin.
 
 * Käyttäjien tulee pystyä aloittamaan uusi peli pelin loputtua ilman 
 ohjelman uudelleenkäynnistystä.
