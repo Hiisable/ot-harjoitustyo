@@ -1,0 +1,4 @@
+/**
+ * Käyttöliittymä
+ */
+package yahtzee.ui;

@@ -39,6 +39,7 @@ public class Player {
      * 
      */
     public Player() {
+        name = "Player";
         totalScore = 0;
         upperScore = 0;
         bonus = 0;

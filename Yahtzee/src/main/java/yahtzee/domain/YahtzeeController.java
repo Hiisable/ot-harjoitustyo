@@ -48,6 +48,17 @@ public class YahtzeeController {
         this.twoPlayers = true;
     }
     
+    /**
+     * Metodi tarkistaa löytyykö aktiiviselta pelaajalta pistesuoritus
+     * valitusta kategoriasta.
+     * 
+     * @param index Valitun pistesuorituksen kategoria.
+     * @return Pistesuorituksen status.
+     */
+    public boolean checkScoreStatus(int index) {
+        return this.currentPlayer.checkIfScored(index);
+    }
+    
     public String getPlayerOneName() {
         return this.playerOne.getName();
     }
@@ -115,17 +126,39 @@ public class YahtzeeController {
      */
     public boolean checkGameState() {
         boolean gameOver = false;
-        if (twoPlayers && this.playerTwo.getTurnCount() == 15 && this.playerOne.getTurnCount() == 15) {
+        if (twoPlayers && this.playerTwo.getTurnCount() == 16 && this.playerOne.getTurnCount() == 16) {
             gameOver = true;
-        } else if (!twoPlayers && this.playerOne.getTurnCount() == 15) {
+        } else if (!twoPlayers && this.playerOne.getTurnCount() == 16) {
             gameOver = true;
         }
         return gameOver;
     }
     
+    /**
+     * Metodi tarkistaa pelaajien pisteet ja palauttaa pelaajan, jonka pisteet ovat
+     * suuremmat tai tasapelin tapauksessa null.
+     * 
+     * @return Pelin voittaja tai null.
+     */
+    public Player getWinner() {
+        if (twoPlayers && this.playerTwo.getScore() > this.playerOne.getScore()) {
+            return playerTwo;
+        } else if (twoPlayers && this.playerTwo.getScore() == this.playerOne.getScore()) {
+            return null;
+        } else {
+            return playerOne;
+        }
+    }
+    
+    /**
+     * Metodi asettaa pelaajien muuttujat niiden oletusarvoiksi.
+     * 
+     * @see yahtzee.domain.Player#clearAll() 
+     */
     public void newGame() {
         this.playerOne.clearAll();
         this.playerTwo.clearAll();
+        this.currentPlayer = this.playerOne;
     }
     
     /**

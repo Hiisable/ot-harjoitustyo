@@ -217,15 +217,33 @@ public class ScoreCheckerTest {
     
     @Test
     public void checkingTwoPairsWorks() {
-        dice.setAllDice(5);
-        assertTrue(checker.checkTwoPairs(dice));
-        dice.setValueOfDie(0, 3);
-        assertTrue(checker.checkTwoPairs(dice));
-        dice.setValueOfDie(1, 3);
-        assertTrue(checker.checkTwoPairs(dice));
-        dice.setValueOfDie(2, 2);
-        dice.setValueOfDie(3, 4);
-        assertFalse(checker.checkTwoPairs(dice));
+        for (int i = 1; i <= 6; i++) {
+            dice.setAllDice(i);
+            assertTrue(checker.checkTwoPairs(dice));
+            if (i < 6) {
+                dice.setValueOfDie(0, i + 1);
+                dice.setValueOfDie(1, i + 1);
+                assertTrue(checker.checkTwoPairs(dice));
+                if (i < 5) {
+                    dice.setValueOfDie(0, i + 2);
+                    assertFalse(checker.checkTwoPairs(dice));
+                    dice.setValueOfDie(1, i + 2);
+                    assertTrue(checker.checkTwoPairs(dice));
+                } if (i < 4) {
+                    dice.setValueOfDie(0, i + 3);
+                    dice.setValueOfDie(1, i + 3);
+                    assertTrue(checker.checkTwoPairs(dice));
+                } if (i < 3)  {
+                    dice.setValueOfDie(0, i + 4);
+                    dice.setValueOfDie(1, i + 4);
+                    assertTrue(checker.checkTwoPairs(dice));
+                } if (i < 2) {
+                    dice.setValueOfDie(0, i + 5);
+                    dice.setValueOfDie(1, i + 5);
+                    assertTrue(checker.checkTwoPairs(dice));
+                }         
+            }
+        }
     }
     
 
