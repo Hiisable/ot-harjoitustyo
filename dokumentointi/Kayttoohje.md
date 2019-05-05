@@ -7,7 +7,7 @@ Lataa tiedosto Yahtzee.jar
 
 Ohjelma käynnistetään joko tuplaklikkaamalla ladattua jar-tiedostoa tai komennolla
 
-`java -jar Yahtzee-1.0-SNAPSHOT.jar`
+`java -jar Yahtzee.jar`
 
 ## Pelin aloitus
 
