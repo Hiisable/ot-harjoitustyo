@@ -17,6 +17,8 @@ Helsingin yliopiston kurssin Ohjelmistotekniikka aikana luotu ohjelma, jonka tar
 
 ## **Releaset**
 
+[Loppupalautus](https://github.com/Hiisable/ot-harjoitustyo/releases/tag/Viikko7)
+
 [Viikko 6](https://github.com/Hiisable/ot-harjoitustyo/releases/tag/Viikko6)
 
 [Viikko 5](https://github.com/Hiisable/ot-harjoitustyo/releases/tag/Viikko5)
